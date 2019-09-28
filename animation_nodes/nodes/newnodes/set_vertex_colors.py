@@ -12,7 +12,6 @@ class SetVertexColorsNode(bpy.types.Node, AnimationNode):
     errorHandlingType = "EXCEPTION"
 
     vertexColorName = StringProperty(name = "Vertex Color Group", default = "Col", update = propertyChanged)
-    checkIfColorIsSet = BoolProperty(default = True)
     useColorList = VectorizedSocket.newProperty()
     messageInfo = StringProperty()
 
@@ -26,9 +25,6 @@ class SetVertexColorsNode(bpy.types.Node, AnimationNode):
         layout.prop(self, "vertexColorName", text = "", icon = "GROUP_VCOL")
         if (self.messageInfo != ""):
             layout.label(self.messageInfo, icon="INFO")
-
-    def drawAdvanced(self, layout):
-        layout.prop(self, "checkIfColorIsSet", text = "Check Color")
         
     def getExecutionFunctionName(self):
         if self.useColorList:
