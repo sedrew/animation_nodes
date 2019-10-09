@@ -1,1 +1,6 @@
 These nodes for animation nodes v2.1 for blender 2.79
+
+Manually Installation Guide:
+   1) Copy the "material.py and texture.py" into the "sockets" folder of animation nodes
+   2) Copy the "node_menu.py" into the "ui" folder of animation nodes
+   3) Copy the "newnodes" folder into the "nodes" folder of animation noddes

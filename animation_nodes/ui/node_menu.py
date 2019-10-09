@@ -37,6 +37,7 @@ def drawMenu(self, context):
     layout.menu("an_falloff_menu", text = "Falloff", icon = "SMOOTHCURVE")
     layout.menu("an_fcurve_menu", text = "FCurves", icon = "IPO")
     layout.menu("an_material_menu", text = "Material", icon = "MATERIAL_DATA")
+    layout.menu("an_texture_menu", text = "Texture", icon = "TEXTURE_DATA")
     layout.menu("an_sound_menu", text = "Sound", icon = "SPEAKER")
     layout.menu("an_sequence_menu", text = "Sequence", icon = "SEQUENCE")
     layout.separator()
@@ -515,6 +516,14 @@ class MaterialMenu(bpy.types.Menu):
         layout = self.layout
         insertNode(layout, "an_CyclesMaterialOutputNode", "Cycles Material Output")
         insertNode(layout, "an_ViewportColorNode", "Viewport Color")
+
+class TexturelMenu(bpy.types.Menu):
+    bl_idname = "an_texture_menu"
+    bl_label = "Texture Menu"
+
+    def draw(self, context):
+        layout = self.layout
+        insertNode(layout, "an_TextureInputNode", "Texture Input")
 
 class ParticleSystemMenu(bpy.types.Menu):
     bl_idname = "an_particle_system_menu"
