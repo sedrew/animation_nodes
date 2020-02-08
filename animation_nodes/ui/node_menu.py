@@ -510,6 +510,7 @@ class GPencilMenu(bpy.types.Menu):
         insertNode(layout, "an_GPSetLayerOpacityNode", "Set Layer Opacity")
         insertNode(layout, "an_GPSetLayerPassIndexNode", "Set Layer Pass Index")
         insertNode(layout, "an_GPTransformLayerNode", "Transform Layer")
+        insertNode(layout, "an_GPLayerMaskNode", "Layer Mask")
         layout.separator()
         insertNode(layout, "an_GPSetStrokeCyclicNode", "Set Stroke Cyclic")
         insertNode(layout, "an_GPSetStrokeLineWidthNode", "Set Stroke Line Width")
